@@ -34,6 +34,8 @@ Brier Decomposition by League
 | ('F1', 'Model')   | 6800 |        0.2495 |        0.0012 |       0.0019 |  0.2487 |
 | ('I1', 'Market')  | 7098 |        0.25   |        0.0002 |       0.0057 |  0.2446 |
 | ('I1', 'Model')   | 7098 |        0.25   |        0.0008 |       0.001  |  0.2498 |
+| ('SP1', 'Market') | 7130 |        0.25   |        0.0001 |       0.0093 |  0.2407 |
+| ('SP1', 'Model')  | 7130 |        0.25   |        0.0007 |       0.0043 |  0.2464 |
 
 Pooled Brier Decomposition
 | forecaster   |     n |   Uncertainty |   Reliability |   Resolution |   Brier |
