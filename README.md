@@ -3,7 +3,6 @@ This is a simple logistic regression notebook to demonstrate understanding of th
 
 ## Results and Findings
 ### Pooled Results
-Pooled Results
 |       |   Log Loss |   Brier |
 |:------|-----------:|--------:|
 | base  |     0.6916 |  0.2492 |
@@ -58,7 +57,7 @@ A series of logistic regression models are then built using a simple pipeline, w
 4. Model Testing/Plots
 The model outputs for each season are then assessed compared to 3 other probabilities: the baseline approach, which just uses a single predicted probability of the observed frequency in the training set, price implied probability, which is the implied probability from the price, and the market implied probability, which uses the normalised (devigged) probability from the price (this is done by simply dividing the implied price probability by the implied price probability sum over the 2 markets, which is obviously a crude method but for our purposes, where all events are closer to a coin toss than a certainty and no observation strays to an extreme, it is considered an effective method).
 
-## Results
+## Plots
 ![Log loss and calibration by league](figures/LogLossModelCalibrationPlots.png)
  
 
