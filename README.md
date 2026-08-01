@@ -22,7 +22,22 @@ This is a simple logistic regression notebook to demonstrate understanding of th
 - **Difficult to differentiate from the baseline**
 
 ### Brier Decomposition
-
+Brier Decomposition by League
+|                   |    n |   Uncertainty |   Reliability |   Resolution |   Brier |
+|:------------------|-----:|--------------:|--------------:|-------------:|--------:|
+| ('D1', 'Market')  | 5725 |        0.2436 |        0.0004 |       0.0068 |  0.2372 |
+| ('D1', 'Model')   | 5725 |        0.2436 |        0.0015 |       0.002  |  0.2431 |
+| ('E0', 'Market')  | 7115 |        0.249  |        0.0003 |       0.0053 |  0.2441 |
+| ('E0', 'Model')   | 7115 |        0.249  |        0.0004 |       0.0019 |  0.2476 |
+| ('F1', 'Market')  | 6800 |        0.2495 |        0.0003 |       0.0081 |  0.2417 |
+| ('F1', 'Model')   | 6800 |        0.2495 |        0.0012 |       0.0019 |  0.2487 |
+| ('I1', 'Market')  | 7098 |        0.25   |        0.0002 |       0.0057 |  0.2446 |
+| ('I1', 'Model')   | 7098 |        0.25   |        0.0008 |       0.001  |  0.2498 |
+...
+| forecaster   |     n |   Uncertainty |   Reliability |   Resolution |   Brier |
+|:-------------|------:|--------------:|--------------:|-------------:|--------:|
+| Market       | 33868 |        0.2486 |        0.0003 |       0.007  |  0.2418 |
+| Model        | 33868 |        0.2486 |        0.0009 |       0.0022 |  0.2473 |
 - **Sharpness vs. Calibration** 
 
 ## Data
