@@ -1,6 +1,30 @@
 # Over/Under 2.5 Goals Logistic Regression Model
 This is a simple logistic regression notebook to demonstrate understanding of the model building process and the relevant libraries (pandas, scikit-learn, numpy). 
 
+## Results and Findings
+### Pooled Results
+|       |   Log Loss |    Brier |
+|:------|-----------:|---------:|
+| base  |   0.691607 | 0.24923  |
+| price |   0.676314 | 0.241762 |
+| mkt   |   0.674993 | 0.241121 |
+| model |   0.687227 | 0.247053 |
+
+- **Price beats model** 
+
+### Skill Scores
+|       |   Log Loss |      Brier |
+|:------|-----------:|-----------:|
+| base  | 0          | 0          |
+| price | 0.022112   | 0.0299616  |
+| mkt   | 0.0240219  | 0.0325351  |
+| model | 0.00633368 | 0.00873121 |
+- **Difficult to differentiate from the baseline**
+
+### Brier Decomposition
+
+- **Sharpness vs. Calibration** 
+
 ## Data
 The data is sourced from football-data.co.uk, where basic match statistics are uploaded weekly.
 
@@ -15,7 +39,7 @@ A series of logistic regression models are then built using a simple pipeline, w
 4. Model Testing/Plots
 The model outputs for each season are then assessed compared to 3 other probabilities: the baseline approach, which just uses a single predicted probability of the observed frequency in the training set, price implied probability, which is the implied probability from the price, and the market implied probability, which uses the normalised (devigged) probability from the price.
 
-## Results
+## Plots
 ![Log loss and calibration by league](figures/loglossCalibration.png)
  
 
