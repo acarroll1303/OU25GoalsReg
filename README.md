@@ -5,20 +5,20 @@ This is a simple logistic regression notebook to demonstrate understanding of th
 ### Pooled Results
 |       |   Log Loss |   Brier |
 |:------|-----------:|--------:|
-| base  |     0.6916 |  0.2492 |
-| price |     0.6763 |  0.2418 |
-| mkt   |     0.675  |  0.2411 |
-| model |     0.6872 |  0.2471 | 
+| Base  |     0.6916 |  0.2492 |
+| Price |     0.6763 |  0.2418 |
+| Market|     0.675  |  0.2411 |
+| Model |     0.6872 |  0.2471 | 
 
 - **Price beats model** The log loss for the model (0.6872), while better than the baseline's (0.6916), is still higher than even the implied probability from pricing (0.6763), with the overround still attached. This shows the model's forecasting power isn't just weaker than the market's, it's weaker than the market's inflated estimate. Against the devigged probabilities, the gap is even larger (market implied probability = 0.6750).
 
 ### Skill Scores
 |       |   Log Loss |      Brier |
 |:------|-----------:|-----------:|
-| base  | 0          | 0          |
-| price | 0.0221     | 0.03       |
-| mkt   | 0.024      | 0.0325     |
-| model | 0.0063     | 0.0087     |
+| Base  | 0          | 0          |
+| Price | 0.0221     | 0.03       |
+| Market   | 0.024      | 0.0325     |
+| Model | 0.0063     | 0.0087     |
 - **Difficult to differentiate from the baseline** The highest skill score any forecaster achieves above the baseline is the market's Brier score at 3.25%. This is because the baseline uncertainty is near-maximum. Resolution, the main driver in both the market's and the model's skill scores, is tiny, as it is difficult to sort any games as comfortably identifiable as over or under from outcomes that can be altered by so many random events.
 
 ### Brier Decomposition
@@ -43,8 +43,15 @@ Pooled Brier Decomposition
 | Model        | 33868 |        0.2486 |        0.0009 |       0.0022 |  0.2473 |
 - **Sharpness vs. Calibration** 
 The market beats the model in both reliability and resolution, but the main driver in the difference is the resolution gap, which is roughly 8 times larger than the reliability gap. The market gains most of its edge in confidently straying from the baseline, but also in getting it right, whereas the model's predictions stay closer to the baseline rate, but also stray slightly further from the observed values.
+
+## Running it
+pip install -r requirements.txt
+
+Open `OU25.ipynb` and run all cells. Match data is downloaded from
+football-data.co.uk on first run.
+
 ## Data
-The data is sourced from football-data.co.uk, where basic match statistics are uploaded weekly.
+The data is sourced from `football-data.co.uk`, where basic match statistics are uploaded weekly.
 
 ## Methodology
 The methodology flows as follows:
